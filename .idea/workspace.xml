@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22f1e871-6931-41d5-ad62-c4f2e410f741" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/EnergyGuiApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/EnergyGuiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/src/main/resources/com/example/gui_javafx/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/src/main/resources/com/example/gui_javafx/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/EnergyGuiApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/EnergyGuiApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/EnergyGuiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/EnergyGuiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature-ID2-JavaFX" />
+        <entry key="$PROJECT_DIR$" value="feature-ID1-RESTAPI" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,12 +38,12 @@
     &quot;assignee&quot;: &quot;kopernike&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/kopernike/Energy-Base-DSTB.git",
-    "accountId": "dd47fd1d-c7d7-4d62-8b8b-35eecfeaad34"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kopernike/Energy-Base-DSTB.git&quot;,
+    &quot;accountId&quot;: &quot;5d9f753f-2f72-4626-9de0-ba23f845bbdb&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -66,16 +65,18 @@
     "Application.EnergyGuiApp.executor": "Run",
     "HTTP Request.generated-requests | #1.executor": "Run",
     "HTTP Request.generated-requests | #2.executor": "Run",
+    "HTTP Request.generated-requests | #3.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.DemoApplication.executor": "Run",
     "git-widget-placeholder": "feature-ID2-JavaFX",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/user/Desktop/Energy-Base-DSTB/GUI_JAVAFX",
+    "last_opened_file_path": "C:/Users/Muhammed Kacakci/Desktop/Energy-Base-Project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,6 +85,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -107,6 +109,9 @@
     <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" executionIdentifier="#2" index="2" runType="Run single request">
       <method v="2" />
     </configuration>
+    <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" executionIdentifier="#3" index="3" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
@@ -117,6 +122,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.EnergyGuiApp" />
+        <item itemvalue="HTTP Request.generated-requests | #3" />
         <item itemvalue="HTTP Request.generated-requests | #2" />
         <item itemvalue="HTTP Request.generated-requests | #1" />
       </list>
@@ -147,11 +153,25 @@
       <workItem from="1745058281668" duration="4467000" />
       <workItem from="1745069174237" duration="81000" />
       <workItem from="1745069328099" duration="161000" />
-      <workItem from="1745069591152" duration="5923000" />
+      <workItem from="1745069591152" duration="9697000" />
+      <workItem from="1745233831651" duration="1725000" />
+      <workItem from="1745318723899" duration="334000" />
+      <workItem from="1745333514578" duration="2401000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

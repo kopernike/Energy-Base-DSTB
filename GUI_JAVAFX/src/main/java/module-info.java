@@ -1,6 +1,8 @@
 module com.example.gui_javafx {
     requires javafx.controls;
     requires javafx.fxml;
+    requires com.google.gson;
+    requires java.net.http;
 
 
     opens com.example.gui_javafx to javafx.fxml;

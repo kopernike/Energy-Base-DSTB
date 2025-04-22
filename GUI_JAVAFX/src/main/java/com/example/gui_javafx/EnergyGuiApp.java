@@ -5,13 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class EnergyGuiApp extends Application {
 
     @Override
-    public void start(Stage stage) throws Exception {
-        try{
+    public void start(Stage stage) {
+        try {
             FXMLLoader fxmlLoader = new FXMLLoader(EnergyGuiApp.class.getResource("hello-view.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 400, 400);
             stage.setTitle("Energy Dashboard");
@@ -26,7 +24,3 @@ public class EnergyGuiApp extends Application {
         launch();
     }
 }
-
-
-
-

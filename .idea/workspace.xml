@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="22f1e871-6931-41d5-ad62-c4f2e410f741" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/EnergyGuiApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/EnergyGuiApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/EnergyGuiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/EnergyGuiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/REST API SPRING/src/main/java/com/example/demo/model/CurrentEnergyData.java" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/src/main/java/com/example/demo/model/CurrentEnergyData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/REST API SPRING/target/classes/com/example/demo/model/CurrentEnergyData.class" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/target/classes/com/example/demo/model/CurrentEnergyData.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature-ID1-RESTAPI" />
+        <entry key="$PROJECT_DIR$" value="feature-ID2-fixes" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,7 +42,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/kopernike/Energy-Base-DSTB.git&quot;,
-    &quot;accountId&quot;: &quot;5d9f753f-2f72-4626-9de0-ba23f845bbdb&quot;
+    &quot;accountId&quot;: &quot;dd47fd1d-c7d7-4d62-8b8b-35eecfeaad34&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -65,18 +66,16 @@
     "Application.EnergyGuiApp.executor": "Run",
     "HTTP Request.generated-requests | #1.executor": "Run",
     "HTTP Request.generated-requests | #2.executor": "Run",
-    "HTTP Request.generated-requests | #3.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.DemoApplication.executor": "Run",
-    "git-widget-placeholder": "feature-ID2-JavaFX",
+    "git-widget-placeholder": "feature-ID2-fixes",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Muhammed Kacakci/Desktop/Energy-Base-Project",
+    "last_opened_file_path": "C:/Users/user/Desktop/Energy-Base-DSTB/GUI_JAVAFX",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,7 +84,6 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -125,6 +123,7 @@
         <item itemvalue="HTTP Request.generated-requests | #3" />
         <item itemvalue="HTTP Request.generated-requests | #2" />
         <item itemvalue="HTTP Request.generated-requests | #1" />
+        <item itemvalue="Application.EnergyGuiApp" />
       </list>
     </recent_temporary>
   </component>
@@ -153,10 +152,7 @@
       <workItem from="1745058281668" duration="4467000" />
       <workItem from="1745069174237" duration="81000" />
       <workItem from="1745069328099" duration="161000" />
-      <workItem from="1745069591152" duration="9697000" />
-      <workItem from="1745233831651" duration="1725000" />
-      <workItem from="1745318723899" duration="334000" />
-      <workItem from="1745333514578" duration="2401000" />
+      <workItem from="1745069591152" duration="5923000" />
     </task>
     <servers />
   </component>

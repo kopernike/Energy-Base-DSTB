@@ -1,18 +1,8 @@
-package com.example.gui_javafx;
+/* package com.example.gui_javafx;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.*;
-
-import java.lang.reflect.Type;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.time.LocalDate;
-import java.util.List;
 
 public class EnergyGuiController {
 
@@ -34,11 +24,47 @@ public class EnergyGuiController {
     @FXML
     private DatePicker endDate;
 
+    @FXML private TextArea outputArea;
+
     @FXML
-    private TextArea outputArea;
+    public void initialize() {
+        refreshButton.setOnAction(e -> {
+            communityLabel.setText("Community Pool: 78.54% used");
+            gridLabel.setText("Grid Portion: 21.46%");
+        });
+
+        showDataButton.setOnAction(e -> {
+            outputArea.setText("Community produced: 143.024 kWh\n" +
+                    "Community used: 130.101 kWh\n" +
+                    "Grid used: 14.75 kWh");
+        });
+    }
+}*/
+
+package com.example.gui_javafx;
+
+import javafx.application.Platform;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URI;
+import java.net.http.*;
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class EnergyGuiController {
+
+    @FXML private Label communityLabel;
+    @FXML private Label gridLabel;
+    @FXML private Button refreshButton;
+    @FXML private Button showDataButton;
+    @FXML private DatePicker startDate;
+    @FXML private DatePicker endDate;
+    @FXML private TextArea outputArea;
 
     private final HttpClient client = HttpClient.newHttpClient();
-    private final Gson gson = new Gson();
 
     @FXML
     public void initialize() {
@@ -52,22 +78,23 @@ public class EnergyGuiController {
                     .uri(new URI("http://localhost:8080/energy/current"))
                     .build();
 
-            client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+            client.sendAsync(request, HttpResponse.BodyHandlers.ofInputStream())
                     .thenApply(HttpResponse::body)
-                    .thenAccept(response -> {
-                        CurrentEnergyData data = gson.fromJson(response, CurrentEnergyData.class);
+                    .thenAccept(stream -> {
+                        String json = convertStreamToString(stream);
+
+                        double communityUsed = Double.parseDouble(getJsonValue(json, "communityUsed"));
+                        double gridPortion = Double.parseDouble(getJsonValue(json, "gridPortion"));
+
                         Platform.runLater(() -> {
-                            communityLabel.setText("Community Pool: " + data.communityUsed + "% used");
-                            gridLabel.setText("Grid Portion: " + data.gridPortion + "%");
+                            communityLabel.setText("Community Pool: " + communityUsed + "% used");
+                            gridLabel.setText("Grid Portion: " + gridPortion + "%");
                         });
                     });
+
         } catch (Exception e) {
             e.printStackTrace();
-
         }
-
-
-
     }
 
     private void fetchHistoricalData() {
@@ -79,8 +106,8 @@ public class EnergyGuiController {
             return;
         }
 
-        String startStr = start.atStartOfDay().toString();
-        String endStr = end.atTime(23, 59).toString();
+        String startStr = start + "T00:00";
+        String endStr = end + "T23:59";
 
         try {
             String url = String.format("http://localhost:8080/energy/historical?start=%s&end=%s", startStr, endStr);
@@ -89,37 +116,66 @@ public class EnergyGuiController {
                     .uri(new URI(url))
                     .build();
 
-            client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+            client.sendAsync(request, HttpResponse.BodyHandlers.ofInputStream())
                     .thenApply(HttpResponse::body)
-                    .thenAccept(response -> {
-                        Type listType = new TypeToken<List<EnergyUsageEntry>>(){}.getType();
-                        List<EnergyUsageEntry> list = gson.fromJson(response, listType);
+                    .thenAccept(stream -> {
+                        String json = convertStreamToString(stream);
+
+                        // Manuell splitten – sehr basic
+                        String[] entries = json.replace("[", "")
+                                .replace("]", "")
+                                .split("\\},\\{");
 
                         StringBuilder sb = new StringBuilder();
-                        for (EnergyUsageEntry entry : list) {
-                            sb.append("[").append(entry.hour).append("] ")
-                                    .append("Produced: ").append(entry.communityProduced).append(" kWh, ")
-                                    .append("Used: ").append(entry.communityUsed).append(" kWh, ")
-                                    .append("Grid: ").append(entry.gridUsed).append(" kWh\n");
+
+                        for (String entry : entries) {
+                            entry = entry.replace("{", "").replace("}", "").replace("\"", "");
+                            String[] fields = entry.split(",");
+
+                            String hour = getField(fields, "hour");
+                            String produced = getField(fields, "communityProduced");
+                            String used = getField(fields, "communityUsed");
+                            String grid = getField(fields, "gridUsed");
+
+                            sb.append("[").append(hour).append("] ")
+                                    .append("Produced: ").append(produced).append(" kWh, ")
+                                    .append("Used: ").append(used).append(" kWh, ")
+                                    .append("Grid: ").append(grid).append(" kWh\n");
                         }
 
                         Platform.runLater(() -> outputArea.setText(sb.toString()));
                     });
+
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    // Klassen für JSON-Mapping
-    private static class CurrentEnergyData {
-        double communityUsed;
-        double gridPortion;
+    // 📦 Hilfsmethoden für JSON Parsing ohne Gson
+    private String convertStreamToString(InputStream inputStream) {
+        Scanner scanner = new Scanner(inputStream).useDelimiter("\\A");
+        return scanner.hasNext() ? scanner.next() : "";
     }
 
-    private static class EnergyUsageEntry {
-        String hour;
-        double communityProduced;
-        double communityUsed;
-        double gridUsed;
+    private String getJsonValue(String json, String key) {
+        String[] parts = json.replace("{", "").replace("}", "").replace("\"", "").split(",");
+        for (String part : parts) {
+            String[] kv = part.split(":");
+            if (kv[0].trim().equals(key)) {
+                return kv[1].trim();
+            }
+        }
+        return "0.0";
+    }
+
+    private String getField(String[] fields, String key) {
+        for (String field : fields) {
+            String[] kv = field.split(":");
+            if (kv.length == 2 && kv[0].trim().equals(key)) {
+                return kv[1].trim();
+            }
+        }
+        return "-";
     }
 }
+

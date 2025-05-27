@@ -1,0 +1,110 @@
+GET http://localhost:8080/energy/current
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 52
+
+{
+  "communityUsed": 78.54,
+  "gridPortion": 21.46
+}
+
+<> 2025-04-23T131357.200.json
+
+###
+
+GET http://localhost:8080/energy/current
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 52
+
+{
+  "communityUsed": 78.54,
+  "gridPortion": 21.46
+}
+
+<> 2025-04-23T131351.200.json
+
+###
+
+GET http://localhost:8080/energy/historical?start=H1JR8tVB&end=oG3LFLIQ
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 251
+
+[
+  {
+    "hour": "2025-01-10T14:00",
+    "communityProduced": 143.024,
+    "communityUsed": 130.101,
+    "gridUsed": 14.75
+  },
+  {
+    "hour": "2025-01-10T13:00",
+    "communityProduced": 140.0,
+    "communityUsed": 135.0,
+    "gridUsed": 10.0
+  }
+]
+
+<> 2025-04-23T131321.200.json
+
+###
+
+GET http://localhost:8080/energy/current
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 52
+
+{
+  "communityUsed": 78.54,
+  "gridPortion": 21.46
+}
+
+<> 2025-04-23T131308.200.json
+
+###
+
+GET http://localhost:8080/energy/historical?start=f7SWsnVG&end=KIhEfrG6
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 251
+
+[
+  {
+    "hour": "2025-01-10T14:00",
+    "communityProduced": 143.024,
+    "communityUsed": 130.101,
+    "gridUsed": 14.75
+  },
+  {
+    "hour": "2025-01-10T13:00",
+    "communityProduced": 140.0,
+    "communityUsed": 135.0,
+    "gridUsed": 10.0
+  }
+]
+
+<> 2025-04-22T171504.200.json
+
+###
+
+GET http://localhost:8080/energy/current
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 52
+
+{
+  "communityUsed": 78.54,
+  "gridPortion": 21.46
+}
+
+<> 2025-04-22T171419.200.json
+
+###
+

@@ -70,7 +70,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.DemoApplication.executor": "Run",
-    "git-widget-placeholder": "#1 on feature-ID1-RESTAPI",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/user/Desktop/Energy-Base-DSTB/GUI_JAVAFX",
@@ -153,7 +153,7 @@
       <workItem from="1745069591152" duration="5923000" />
       <workItem from="1746627255561" duration="867000" />
       <workItem from="1747232947709" duration="812000" />
-      <workItem from="1748344946808" duration="438000" />
+      <workItem from="1748344946808" duration="747000" />
     </task>
     <servers />
   </component>

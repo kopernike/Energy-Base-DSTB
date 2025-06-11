@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22f1e871-6931-41d5-ad62-c4f2e410f741" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/REST API SPRING/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/REST API SPRING/src/main/java/com/example/demo/repository/EnergyDatabaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/REST API SPRING/src/main/java/com/example/demo/repository/EnergyEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/REST API SPRING/src/main/resources/db.migration/V1_BeforeNewMessage.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,17 +20,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -43,12 +33,12 @@
     &quot;assignee&quot;: &quot;kopernike&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/kopernike/Energy-Base-DSTB.git",
-    "accountId": "dd47fd1d-c7d7-4d62-8b8b-35eecfeaad34"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kopernike/Energy-Base-DSTB.git&quot;,
+    &quot;accountId&quot;: &quot;5d9f753f-2f72-4626-9de0-ba23f845bbdb&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
   <component name="KubernetesApiProvider"><![CDATA[{
   "isMigrated": true
@@ -79,12 +69,11 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.DemoApplication.executor": "Run",
-    "git-widget-placeholder": "feature__ID3__Database",
+    "git-widget-placeholder": "feature-ID4-EnergyProducer",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/user/Desktop/Energy-Base-DSTB/REST API SPRING",
+    "last_opened_file_path": "C:/Users/Muhammed Kacakci/Desktop/EnergyProducer",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -101,11 +90,6 @@
     ]
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Desktop\Energy-Base-DSTB\REST API SPRING" />
-    </key>
-  </component>
   <component name="RunManager" selected="Docker.REST API SPRING: Compose Deployment">
     <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" executionIdentifier="#1" runType="Run single request">
       <method v="2" />
@@ -116,6 +100,13 @@
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EnergyProducerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="EnergyProducer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.EnergyProducer.EnergyProducerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -166,7 +157,6 @@
       <workItem from="1745069174237" duration="81000" />
       <workItem from="1745069328099" duration="161000" />
       <workItem from="1745069591152" duration="5923000" />
-      <workItem from="1749643295787" duration="3018000" />
     </task>
     <servers />
   </component>

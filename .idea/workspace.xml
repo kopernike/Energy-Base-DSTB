@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22f1e871-6931-41d5-ad62-c4f2e410f741" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/REST API SPRING/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/REST API SPRING/src/main/java/com/example/demo/repository/EnergyDatabaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/REST API SPRING/src/main/java/com/example/demo/repository/EnergyEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/REST API SPRING/src/main/resources/db.migration/V1_BeforeNewMessage.sql" afterDir="false" />
+    <list default="true" id="22f1e871-6931-41d5-ad62-c4f2e410f741" name="Changes" comment="Datenbankstruktur erstellt">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,16 +38,16 @@
     &quot;assignee&quot;: &quot;kopernike&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/kopernike/Energy-Base-DSTB.git",
-    "accountId": "dd47fd1d-c7d7-4d62-8b8b-35eecfeaad34"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kopernike/Energy-Base-DSTB.git&quot;,
+    &quot;accountId&quot;: &quot;dd47fd1d-c7d7-4d62-8b8b-35eecfeaad34&quot;
   }
-}]]></component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -81,10 +76,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.DemoApplication.executor": "Run",
-    "git-widget-placeholder": "feature__ID3__Database",
+    "git-widget-placeholder": "feature__ID5__EnergyUser",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/user/Desktop/Energy-Base-DSTB/REST API SPRING",
+    "last_opened_file_path": "C:/Users/user/Downloads/EnergyUser/EnergyUser",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -120,6 +115,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EnergyUserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="EnergyUser" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.EnergyUser.EnergyUserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="REST API SPRING: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -129,7 +131,9 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -166,11 +170,24 @@
       <workItem from="1745069174237" duration="81000" />
       <workItem from="1745069328099" duration="161000" />
       <workItem from="1745069591152" duration="5923000" />
-      <workItem from="1749643295787" duration="3018000" />
+      <workItem from="1749643295787" duration="8538000" />
     </task>
+    <task id="LOCAL-00001" summary="Datenbankstruktur erstellt">
+      <option name="closed" value="true" />
+      <created>1749646426147</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749646426148</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Datenbankstruktur erstellt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Datenbankstruktur erstellt" />
   </component>
 </project>

@@ -8,13 +8,17 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo" />
         <module name="GUI_JAVAFX" />
-        <module name="EnergyProducer" />
+        <module name="EnergyUser" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="EnergyProducer" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="EnergyProducer" options="-parameters" />
+      <module name="EnergyUser" options="-parameters" />
       <module name="demo" options="-parameters" />
     </option>
   </component>

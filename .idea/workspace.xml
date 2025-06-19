@@ -4,78 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22f1e871-6931-41d5-ad62-c4f2e410f741" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/EnergyProducer/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EnergyProducer/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EnergyProducer/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EnergyProducer/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EnergyProducer/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EnergyProducer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EnergyProducer/src/main/java/com/example/EnergyProducer/EnergyProducerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EnergyProducer/src/main/java/com/example/EnergyProducer/messaging/ProducerMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EnergyProducer/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EnergyProducer/src/test/java/com/example/EnergyProducer/EnergyProducerApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="22f1e871-6931-41d5-ad62-c4f2e410f741" name="Changes" comment="producer message">
+      <change afterPath="$PROJECT_DIR$/UsageService/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UsageService/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UsageService/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UsageService/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UsageService/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UsageService/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UsageService/src/main/java/com/example/UsageService/UsageServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UsageService/src/main/java/com/example/UsageService/dto/MessageDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UsageService/src/main/java/com/example/UsageService/messaging/PrdcUsrMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UsageService/src/main/java/com/example/UsageService/repository/UsageEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UsageService/src/main/java/com/example/UsageService/repository/UsageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UsageService/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UsageService/src/test/java/com/example/UsageService/UsageServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-22T171419.200.json" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-04-22T171419.200.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-22T171504.200.json" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-04-22T171504.200.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-23T131308.200.json" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-04-23T131308.200.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-23T131321.200.json" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-04-23T131321.200.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-23T131351.200.json" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-04-23T131351.200.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-23T131357.200.json" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-04-23T131357.200.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_04_2025_15_45_[Changes]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_04_2025_15_45_[Changes]/shelved.patch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_04_2025_15_45__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_04_2025_15_45__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_05_2025_14_01_[Changes]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_05_2025_14_01_[Changes]/shelved.patch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnergyUser/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/EnergyUser/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnergyUser/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/EnergyUser/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnergyUser/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/EnergyUser/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnergyUser/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EnergyUser/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnergyUser/src/main/java/com/example/EnergyUser/EnergyUserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/EnergyUser/src/main/java/com/example/EnergyUser/EnergyUserApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnergyUser/src/main/java/com/example/EnergyUser/messaging/UserMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/EnergyUser/src/main/java/com/example/EnergyUser/messaging/UserMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnergyUser/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/EnergyUser/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnergyUser/src/test/java/com/example/EnergyUser/EnergyUserApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/EnergyUser/src/test/java/com/example/EnergyUser/EnergyUserApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/CurrentData.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/CurrentData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/EnergyGuiApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/EnergyGuiApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/EnergyGuiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/EnergyGuiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/HistoricalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/com/example/gui_javafx/HistoricalData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/src/main/resources/com/example/gui_javafx/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/src/main/resources/com/example/gui_javafx/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_JAVAFX/target/classes/com/example/gui_javafx/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_JAVAFX/target/classes/com/example/gui_javafx/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/src/main/java/com/example/demo/controller/EnergyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/src/main/java/com/example/demo/controller/EnergyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/src/main/java/com/example/demo/model/CurrentEnergyData.java" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/src/main/java/com/example/demo/model/CurrentEnergyData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/src/main/java/com/example/demo/model/EnergyUsageEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/src/main/java/com/example/demo/model/EnergyUsageEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/src/main/java/com/example/demo/repository/EnergyDatabaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/src/main/java/com/example/demo/repository/EnergyDatabaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/src/main/java/com/example/demo/repository/EnergyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/src/main/java/com/example/demo/repository/EnergyEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST API SPRING/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/REST API SPRING/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnergyProducer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EnergyProducer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnergyProducer/src/main/java/com/example/EnergyProducer/EnergyProducerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/EnergyProducer/src/main/java/com/example/EnergyProducer/EnergyProducerApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +35,7 @@
       <list>
         <option value="package-info" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -142,10 +91,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.DemoApplication.executor": "Run",
-    "git-widget-placeholder": "feature-ID8-producer",
+    "Spring Boot.EnergyProducerApplication.executor": "Run",
+    "Spring Boot.EnergyUserApplication.executor": "Run",
+    "Spring Boot.UsageServiceApplication.executor": "Run",
+    "git-widget-placeholder": "feature__ID9__UsageService",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Muhammed Kacakci/Desktop/Energy-Base-Project",
+    "last_opened_file_path": "C:/Users/Muhammed Kacakci/Desktop/Energy-Base-Project/UsageService",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -155,6 +107,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -201,6 +154,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UsageServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="UsageService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.UsageService.UsageServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="REST API SPRING: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -220,6 +180,8 @@
         <item itemvalue="Docker.REST API SPRING: Compose Deployment" />
         <item itemvalue="HTTP Request.generated-requests | #2" />
         <item itemvalue="HTTP Request.generated-requests | #1" />
+        <item itemvalue="Docker.REST API SPRING: Compose Deployment" />
+        <item itemvalue="HTTP Request.generated-requests | #2" />
       </list>
     </recent_temporary>
   </component>
@@ -249,8 +211,21 @@
       <workItem from="1745069174237" duration="81000" />
       <workItem from="1745069328099" duration="161000" />
       <workItem from="1745069591152" duration="5923000" />
-      <workItem from="1749733425444" duration="919000" />
+      <workItem from="1749733425444" duration="1532000" />
+      <workItem from="1749995570623" duration="499000" />
+      <workItem from="1749996092560" duration="31000" />
+      <workItem from="1750084651916" duration="861000" />
+      <workItem from="1750328646577" duration="5431000" />
     </task>
+    <task id="LOCAL-00001" summary="producer message">
+      <option name="closed" value="true" />
+      <created>1749734383144</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749734383144</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,5 +253,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="producer message" />
+    <option name="LAST_COMMIT_MESSAGE" value="producer message" />
   </component>
 </project>

@@ -9,6 +9,8 @@
         <option value="$PROJECT_DIR$/GUI_JAVAFX/pom.xml" />
         <option value="$PROJECT_DIR$/../EnergyProducer/pom.xml" />
         <option value="$PROJECT_DIR$/EnergyUser/pom.xml" />
+        <option value="$PROJECT_DIR$/EnergyProducer/pom.xml" />
+        <option value="$PROJECT_DIR$/UsageService/pom.xml" />
       </list>
     </option>
   </component>

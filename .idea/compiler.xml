@@ -6,19 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="UsageService" />
         <module name="demo" />
         <module name="GUI_JAVAFX" />
         <module name="EnergyUser" />
+        <module name="EnergyProducer" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="EnergyProducer" target="21" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="EnergyProducer" options="-parameters" />
       <module name="EnergyUser" options="-parameters" />
+      <module name="UsageService" options="-parameters" />
       <module name="demo" options="-parameters" />
     </option>
   </component>

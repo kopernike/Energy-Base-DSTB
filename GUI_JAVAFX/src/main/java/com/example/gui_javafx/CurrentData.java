@@ -1,15 +1,24 @@
 package com.example.gui_javafx;
 
-    public class CurrentData {
-        private double community;
-        private double grid;
+public class CurrentData {
+    private double communityDepleted;
+    private double gridPortion;
 
-        public double getCommunity() {
-            return community;
-        }
-
-        public double getGrid() {
-            return grid;
-        }
+    // Getter/Setter
+    public double getCommunityDepleted() {
+        return communityDepleted;
     }
+
+    public void setCommunityDepleted(double communityDepleted) {
+        this.communityDepleted = communityDepleted;
+    }
+
+    public double getGridPortion() {
+        return gridPortion;
+    }
+
+    public void setGridPortion(double gridPortion) {
+        this.gridPortion = gridPortion;
+    }
+}
 

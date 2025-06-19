@@ -4,6 +4,8 @@ import com.example.UsageService.dto.MessageDTO;
 import com.example.UsageService.repository.UsageEntity;
 import com.example.UsageService.repository.UsageRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
@@ -15,11 +17,14 @@ public class PrdcUsrMessage {
 
     private final RabbitTemplate rabbit;
     private final UsageRepository usageRepository;
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    private final ObjectMapper objectMapper;
 
     public PrdcUsrMessage(RabbitTemplate rabbit, UsageRepository usageRepository) {
         this.rabbit = rabbit;
         this.usageRepository = usageRepository;
+        this.objectMapper = new ObjectMapper()
+                .registerModule(new JavaTimeModule())
+                .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
     }
 
     @RabbitListener(queues = "user-message")
@@ -43,6 +48,9 @@ public class PrdcUsrMessage {
             usageRepository.save(usage);
             System.out.println("User message processed and usage data updated.");
 
+            // Nachricht weiterleiten an "prdcusrmessage"
+            rabbit.convertAndSend("prdcusrmessage", objectMapper.writeValueAsString(dto));
+
         } catch (Exception e) {
             System.err.println("Error processing USER message: " + e.getMessage());
             e.printStackTrace();
@@ -65,6 +73,9 @@ public class PrdcUsrMessage {
 
             usageRepository.save(usage);
             System.out.println("Producer message processed and usage data updated.");
+
+            // Nachricht weiterleiten an "prdcusrmessage"
+            rabbit.convertAndSend("prdcusrmessage", objectMapper.writeValueAsString(dto));
 
         } catch (Exception e) {
             System.err.println("Error processing PRODUCER message: " + e.getMessage());

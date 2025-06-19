@@ -13,6 +13,11 @@ public class CurrentServiceApplication {
 	}
 
 	@Bean
+	public Queue prdcUsrQueue() {
+		return new Queue("prdcusrmessage", true); // durable = true
+	}
+
+	@Bean
 	public Queue percentageUpdateQueue() {
 		return new Queue("update-percentage", true);
 	}

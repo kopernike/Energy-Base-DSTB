@@ -2,8 +2,8 @@ package com.example.CurrentService.service;
 
 import com.example.CurrentService.repository.PercentageEntity;
 import com.example.CurrentService.repository.PercentageRepository;
-import com.example.UsageService.repository.UsageEntity;
-import com.example.UsageService.repository.UsageRepository;
+import com.example.CurrentService.repository.UsageEntity;
+import com.example.CurrentService.repository.UsageRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;

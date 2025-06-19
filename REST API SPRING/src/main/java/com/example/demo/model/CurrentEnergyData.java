@@ -1,23 +1,40 @@
 package com.example.demo.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import java.time.LocalDateTime;
+
+@Entity
 public class CurrentEnergyData {
-    private double communityUsed;
+
+    @Id
+    private LocalDateTime hour;
+
+    private double communityDepleted;
     private double gridPortion;
 
-    // 🔧 Leerer Konstruktor für Gson
-    public CurrentEnergyData() {
+    // Getter & Setter
+    public LocalDateTime getHour() {
+        return hour;
     }
 
-    public CurrentEnergyData(double communityUsed, double gridPortion) {
-        this.communityUsed = communityUsed;
-        this.gridPortion = gridPortion;
+    public void setHour(LocalDateTime hour) {
+        this.hour = hour;
     }
 
-    public double getCommunityUsed() {
-        return communityUsed;
+    public double getCommunityDepleted() {
+        return communityDepleted;
+    }
+
+    public void setCommunityDepleted(double communityDepleted) {
+        this.communityDepleted = communityDepleted;
     }
 
     public double getGridPortion() {
         return gridPortion;
+    }
+
+    public void setGridPortion(double gridPortion) {
+        this.gridPortion = gridPortion;
     }
 }

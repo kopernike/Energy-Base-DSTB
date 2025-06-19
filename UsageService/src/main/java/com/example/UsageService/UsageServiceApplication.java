@@ -18,6 +18,11 @@ public class UsageServiceApplication {
 		return new Queue("producer-message", true);
 	}
 
+	@Bean
+	public Queue prdcUsrQueue() {
+		return new Queue("prdcusrmessage", true); // durable = true
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(UsageServiceApplication.class, args);
 	}

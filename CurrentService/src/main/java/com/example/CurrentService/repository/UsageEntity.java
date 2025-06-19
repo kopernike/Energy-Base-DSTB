@@ -1,11 +1,12 @@
-package com.example.demo.model;
+package com.example.CurrentService.repository;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+
 import java.time.LocalDateTime;
 
 @Entity
-public class EnergyUsageEntry {
+public class UsageEntity {
 
     @Id
     private LocalDateTime hour;
@@ -14,7 +15,6 @@ public class EnergyUsageEntry {
     private double communityUsed;
     private double gridUsed;
 
-    // Getter & Setter
     public LocalDateTime getHour() {
         return hour;
     }

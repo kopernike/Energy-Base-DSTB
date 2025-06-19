@@ -22,6 +22,11 @@ public class UserMessage {
     @Scheduled(fixedRate = 5, timeUnit = TimeUnit.SECONDS)
     public void doSomething() {
         float wert= (float) Math.random();
-        sendMassage("type: USER; association: COMMUNITY; kwh: "+ wert+ ";datetime:" + LocalDateTime.now());
+        sendMassage("{"
+                + "\"type\":\"USER\","
+                + "\"association\":\"COMMUNITY\","
+                + "\"kwh\":" + wert + ","
+                + "\"datetime\":\"" + LocalDateTime.now() + "\""
+                + "}");
     }
 }

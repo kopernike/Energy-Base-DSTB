@@ -7,15 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="UsageService" />
+        <module name="CurrentService" />
         <module name="demo" />
-        <module name="GUI_JAVAFX" />
-        <module name="EnergyUser" />
         <module name="EnergyProducer" />
+        <module name="EnergyUser" />
+        <module name="GUI_JAVAFX" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="CurrentService" options="-parameters" />
       <module name="EnergyProducer" options="-parameters" />
       <module name="EnergyUser" options="-parameters" />
       <module name="UsageService" options="-parameters" />

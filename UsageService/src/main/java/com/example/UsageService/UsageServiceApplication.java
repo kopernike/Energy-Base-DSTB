@@ -1,27 +1,25 @@
-package com.example.EnergyProducer;
+package com.example.UsageService;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.scheduling.annotation.EnableScheduling;
-
 
 @SpringBootApplication
-@EnableScheduling
-public class EnergyProducerApplication {
+public class UsageServiceApplication {
 
-
-	public static void main(String[] args) {
-		SpringApplication.run(EnergyProducerApplication.class, args);
+	@Bean
+	public Queue userMessageQueue() {
+		return new Queue("user-message", true);
 	}
 
 	@Bean
-	public Queue producerQueue() {
+	public Queue producerMessageQueue() {
 		return new Queue("producer-message", true);
+	}
 
+	public static void main(String[] args) {
+		SpringApplication.run(UsageServiceApplication.class, args);
 	}
 
 }
-
-

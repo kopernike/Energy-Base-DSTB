@@ -4,15 +4,16 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/REST API SPRING/pom.xml" />
-        <option value="$PROJECT_DIR$/GUI_JAVAFX/pom.xml" />
-        <option value="$PROJECT_DIR$/../EnergyProducer/pom.xml" />
-        <option value="$PROJECT_DIR$/EnergyUser/pom.xml" />
         <option value="$PROJECT_DIR$/EnergyProducer/pom.xml" />
+        <option value="$PROJECT_DIR$/EnergyUser/pom.xml" />
+        <option value="$PROJECT_DIR$/GUI_JAVAFX/pom.xml" />
+        <option value="$PROJECT_DIR$/REST API SPRING/pom.xml" />
         <option value="$PROJECT_DIR$/UsageService/pom.xml" />
+        <option value="$PROJECT_DIR$/CurrentService/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="openjdk-23" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="openjdk-23" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
 </project>

@@ -16,6 +16,6 @@ public class EnergyUserApplication {
 
 @Bean
 	public Queue userQueue() {
-		return new Queue("userQueue", true);
+		return new Queue("user-message", true);
 }
 }

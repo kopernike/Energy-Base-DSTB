@@ -2,22 +2,24 @@ package com.example.CurrentService.repository;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-
+import jakarta.persistence.Table;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "percentage_entity")
 public class PercentageEntity {
-
     @Id
     private LocalDateTime hour;
-
     private double communityDepleted;
     private double gridPortion;
 
     public PercentageEntity() {}
-
-    public PercentageEntity(LocalDateTime hour) {
-        this.hour = hour;
+    public PercentageEntity(LocalDateTime hour,
+                            double communityDepleted,
+                            double gridPortion) {
+        this.hour             = hour;
+        this.communityDepleted = communityDepleted;
+        this.gridPortion       = gridPortion;
     }
 
     public LocalDateTime getHour() {

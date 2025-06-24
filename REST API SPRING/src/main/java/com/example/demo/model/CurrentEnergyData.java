@@ -2,15 +2,19 @@ package com.example.demo.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "percentage_entity")
 public class CurrentEnergyData {
 
     @Id
     private LocalDateTime hour;
 
-    private double communityDepleted;
+
+    private double communityUsed;
     private double gridPortion;
 
     // Getter & Setter
@@ -22,12 +26,12 @@ public class CurrentEnergyData {
         this.hour = hour;
     }
 
-    public double getCommunityDepleted() {
-        return communityDepleted;
+    public double getCommunityUsed() {
+        return communityUsed;
     }
 
-    public void setCommunityDepleted(double communityDepleted) {
-        this.communityDepleted = communityDepleted;
+    public void setCommunityUsed(double communityUsed) {
+        this.communityUsed = communityUsed;
     }
 
     public double getGridPortion() {

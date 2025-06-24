@@ -24,10 +24,16 @@ public class ProducerMessage {
         rabbit.convertAndSend("producer-message", message);
     }
 
-    @Scheduled (fixedRate = 5, timeUnit = TimeUnit.SECONDS)
-    public void sendMessages() {
+
+    @Scheduled(fixedRate = 5, timeUnit = TimeUnit.SECONDS)
+    public void doSomething() {
         float wert= (float) Math.random();
-        System.out.println("type: PRODUCER; association: COMMUNITY; kwh: "+ wert+"; datetime" + LocalDateTime.now());
+        sendMessage("{"
+                + "\"type\":\"PRODUCER\","
+                + "\"association\":\"COMMUNITY\","
+                + "\"kwh\":" + wert + ","
+                + "\"datetime\":\"" + LocalDateTime.now() + "\""
+                + "}");
     }
 
 

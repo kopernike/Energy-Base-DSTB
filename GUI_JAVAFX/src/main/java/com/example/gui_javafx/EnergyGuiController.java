@@ -1,42 +1,33 @@
 package com.example.gui_javafx;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.net.URI;
-import java.net.http.*;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.time.LocalDate;
-import java.util.Scanner;
+import java.time.LocalDateTime;
+import java.util.List;
 
 public class EnergyGuiController {
 
-    @FXML
-    private Label communityLabel;
-
-    @FXML
-    private Label gridLabel;
-
-    @FXML
-    private Button refreshButton;
-
-    @FXML
-    private Button showDataButton;
-
-
-    @FXML
-    private DatePicker startDate;
-
-    @FXML
-    private DatePicker endDate;
-
-    @FXML
-    private TextArea outputArea;
-
+    @FXML private Label communityLabel;
+    @FXML private Label gridLabel;
+    @FXML private Button refreshButton;
+    @FXML private Button showDataButton;
+    @FXML private DatePicker startDate;
+    @FXML private DatePicker endDate;
+    @FXML private TextArea outputArea;
 
     private final HttpClient client = HttpClient.newHttpClient();
+    private final ObjectMapper mapper = new ObjectMapper()
+            .registerModule(new JavaTimeModule());
 
     @FXML
     public void initialize() {
@@ -47,107 +38,114 @@ public class EnergyGuiController {
     private void fetchCurrentData() {
         try {
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(new URI("http://localhost:8080/energy/current"))
+                    // Port 8081 falls deine REST-API auf 8081 läuft
+                    .uri(new URI("http://localhost:8081/energy/current"))
+                    .GET()
                     .build();
 
-            client.sendAsync(request, HttpResponse.BodyHandlers.ofInputStream())
-                    .thenApply(HttpResponse::body)
-                    .thenAccept(stream -> {
-                        String json = convertStreamToString(stream);
-
-                        double communityUsed = Double.parseDouble(getJsonValue(json, "communityUsed"));
-                        double gridPortion = Double.parseDouble(getJsonValue(json, "gridPortion"));
-
-                        Platform.runLater(() -> {
-                            communityLabel.setText("Community Pool: " + communityUsed + "% used");
-                            gridLabel.setText("Grid Portion: " + gridPortion + "%");
-                        });
+            client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+                    .thenAccept(response -> {
+                        if (response.statusCode() == 200) {
+                            parseAndDisplayCurrent(response.body());
+                        } else {
+                            Platform.runLater(() ->
+                                    outputArea.setText(
+                                            "Fehler beim Laden aktueller Daten: HTTP "
+                                                    + response.statusCode())
+                            );
+                        }
                     });
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            Platform.runLater(() ->
+                    outputArea.setText("Fehler beim Senden der Anfrage.")
+            );
+        }
+    }
 
-        } catch (Exception e) {
-            e.printStackTrace();
+    private void parseAndDisplayCurrent(String json) {
+        try {
+            CurrentDataDTO dto = mapper.readValue(json, CurrentDataDTO.class);
+            Platform.runLater(() -> {
+                communityLabel.setText(
+                        String.format("Community Pool: %.2f%% used", dto.getCommunityDepleted()));
+                gridLabel.setText(
+                        String.format("Grid Portion: %.2f%%", dto.getGridPortion()));
+            });
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            Platform.runLater(() ->
+                    outputArea.setText("Fehler beim Verarbeiten der aktuellen Daten.")
+            );
         }
     }
 
     private void fetchHistoricalData() {
         LocalDate start = startDate.getValue();
-        LocalDate end = endDate.getValue();
-
+        LocalDate end   = endDate.getValue();
         if (start == null || end == null) {
             outputArea.setText("Bitte Start- und Enddatum auswählen.");
             return;
         }
 
         String startStr = start + "T00:00";
-        String endStr = end + "T23:59";
+        String endStr   = end   + "T23:59";
+        String url = String.format(
+                "http://localhost:8081/energy/historical?start=%s&end=%s",
+                startStr, endStr
+        );
 
         try {
-            String url = String.format("http://localhost:8080/energy/historical?start=%s&end=%s", startStr, endStr);
-
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(new URI(url))
+                    .GET()
                     .build();
 
-            client.sendAsync(request, HttpResponse.BodyHandlers.ofInputStream())
-                    .thenApply(HttpResponse::body)
-                    .thenAccept(stream -> {
-                        String json = convertStreamToString(stream);
-
-                        // Manuell splitten – sehr basic
-                        String[] entries = json.replace("[", "")
-                                .replace("]", "")
-                                .split("\\},\\{");
-
-                        StringBuilder sb = new StringBuilder();
-
-                        for (String entry : entries) {
-                            entry = entry.replace("{", "").replace("}", "").replace("\"", "");
-                            String[] fields = entry.split(",");
-
-                            String hour = getField(fields, "hour");
-                            String produced = getField(fields, "communityProduced");
-                            String used = getField(fields, "communityUsed");
-                            String grid = getField(fields, "gridUsed");
-
-                            sb.append("[").append(hour).append("] ")
-                                    .append("Produced: ").append(produced).append(" kWh, ")
-                                    .append("Used: ").append(used).append(" kWh, ")
-                                    .append("Grid: ").append(grid).append(" kWh\n");
+            client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+                    .thenAccept(response -> {
+                        if (response.statusCode() == 200) {
+                            displayHistorical(response.body());
+                        } else {
+                            Platform.runLater(() ->
+                                    outputArea.setText(
+                                            "Fehler beim Laden historischer Daten: HTTP "
+                                                    + response.statusCode())
+                            );
                         }
-
-                        Platform.runLater(() -> outputArea.setText(sb.toString()));
                     });
-
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            Platform.runLater(() ->
+                    outputArea.setText("Fehler beim Senden der Anfrage.")
+            );
         }
     }
 
-    // 📦 Hilfsmethoden für JSON Parsing ohne Gson
-    private String convertStreamToString(InputStream inputStream) {
-        Scanner scanner = new Scanner(inputStream).useDelimiter("\\A");
-        return scanner.hasNext() ? scanner.next() : "";
-    }
+    private void displayHistorical(String json) {
+        try {
+            List<HistoricalDataDTO> list = mapper.readValue(
+                    json,
+                    new TypeReference<List<HistoricalDataDTO>>() {}
+            );
 
-    private String getJsonValue(String json, String key) {
-        String[] parts = json.replace("{", "").replace("}", "").replace("\"", "").split(",");
-        for (String part : parts) {
-            String[] kv = part.split(":");
-            if (kv[0].trim().equals(key)) {
-                return kv[1].trim();
+            StringBuilder sb = new StringBuilder();
+            for (HistoricalDataDTO dto : list) {
+                sb.append("[")
+                        .append(dto.getHour())
+                        .append("] Produced: ")
+                        .append(dto.getCommunityProduced())
+                        .append(" kWh, Used: ")
+                        .append(dto.getCommunityUsed())
+                        .append(" kWh, Grid: ")
+                        .append(dto.getGridUsed())
+                        .append(" kWh\n");
             }
+            Platform.runLater(() -> outputArea.setText(sb.toString()));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            Platform.runLater(() ->
+                    outputArea.setText("Fehler beim Verarbeiten historischer Daten.")
+            );
         }
-        return "0.0";
-    }
-
-    private String getField(String[] fields, String key) {
-        for (String field : fields) {
-            String[] kv = field.split(":");
-            if (kv.length == 2 && kv[0].trim().equals(key)) {
-                return kv[1].trim();
-            }
-        }
-        return "-";
     }
 }
-
